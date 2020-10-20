@@ -11,6 +11,15 @@ routes.get('/instructors', function(req, res) {
     return res.render('instructors/index')
 });
 
+// create
+routes.get('/instructors/create', function(req, res) {
+    return res.render('instructors/create')
+});
+
+routes.post("/instructors", function(req, res) {
+    return res.send('ok, recebido')
+});
+
 // route members
 routes.get('/members', function(req, res) {
     return res.send('members')
