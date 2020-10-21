@@ -17,7 +17,17 @@ routes.get('/instructors/create', function(req, res) {
 })
 
 routes.post("/instructors", function(req, res) {
-    return res.send("recebido")
+
+    const keys = Object.keys(req.body); // Retorna  a chaves dos objetos
+
+    for (key of keys) {
+        if (req.body[key] == "") {
+            return res.send('Please, fill all fields!')
+        }
+    }
+
+    return
+    // return res.send(keys)
 })
 
 // route members
