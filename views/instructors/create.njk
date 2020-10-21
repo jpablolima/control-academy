@@ -2,7 +2,7 @@
 
 
 {% block content %}
-  <form class="card" method="POST" actions="/instructors">
+  <form class="card" method="POST" action="/instructors">
       <section 
         class="avatar" 
         style="background: url(https://source.unsplash.com/collection/3203326/500x500) no-repeat center center / cover"></section>
@@ -26,6 +26,7 @@
                     <input
                         type="text"
                         name="name"
+                        placeholder="Nome do instrutor"
                     >
                 </div>
         </div>
@@ -45,7 +46,7 @@
             <div>Sexo</div>
 
             <div>
-                <span><input type="radio" name="gender" value="M"> Masculino</span> 
+                <span><input type="radio" name="gender" value="M" checked> Masculino</span> 
                 <span><input type="radio" name="gender" value="F"> Feminino</span> 
             </div>
           </div>
@@ -55,10 +56,15 @@
             <div> 
                <input
                  type="text"  
-                 name="services"         
+                 name="services"     
+                 placeholder="Separe os serviços prestados por vírgula"    
                >
             </div>
          </div>
+
+         <button type="submit">Salvar</button>
+
+
     </section>
   </form>
 {% endblock content %}
