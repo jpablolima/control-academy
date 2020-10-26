@@ -17,6 +17,10 @@ routes.get('/instructors/create', function(req, res) {
     return res.render("instructors/create")
 })
 
+
+// get data
+routes.get('/instructors/:id', instructors.show);
+
 routes.post("/instructors", instructors.post);
 
 // route members
