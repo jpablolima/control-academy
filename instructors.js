@@ -61,3 +61,24 @@ exports.post = function(req, res) {
     });
     // return res.send(req.body)
 }
+
+// Edit
+
+exports.edit = function(req, res) {
+
+    const { id } = req.params
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id
+    });
+
+    if (!foundInstructor) return res.send('Instructor not found!')
+
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(','), //Separação de campos
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
+    }
+
+    return res.render("instructors/edit", { instructor: foundInstructor });
+}
