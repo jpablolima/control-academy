@@ -12,15 +12,12 @@ routes.get('/instructors', function(req, res) {
     return res.render("instructors/index")
 })
 
-
 routes.put('/instructors', instructors.put)
-
 
 // create
 routes.get('/instructors/create', function(req, res) {
     return res.render("instructors/create")
 })
-
 
 // get data
 routes.get('/instructors/:id', instructors.show);
@@ -29,6 +26,9 @@ routes.get('/instructors/:id', instructors.show);
 routes.get('/instructors/:id/edit', instructors.edit);
 
 routes.post("/instructors", instructors.post);
+
+// Delete
+routes.delete('/instructors', instructors.delete);
 
 // route members
 routes.get('/members', function(req, res) {
