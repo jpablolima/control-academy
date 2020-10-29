@@ -12,6 +12,10 @@ routes.get('/instructors', function(req, res) {
     return res.render("instructors/index")
 })
 
+
+routes.put('/instructors', instructors.put)
+
+
 // create
 routes.get('/instructors/create', function(req, res) {
     return res.render("instructors/create")
