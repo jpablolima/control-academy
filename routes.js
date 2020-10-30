@@ -8,9 +8,9 @@ routes.get('/', function(req, res) {
 })
 
 // route instructors
-routes.get('/instructors', function(req, res) {
-    return res.render("instructors/index")
-})
+routes.get('/instructors', instructors.index);
+
+
 
 routes.put('/instructors', instructors.put)
 
