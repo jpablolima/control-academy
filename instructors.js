@@ -77,13 +77,6 @@ exports.edit = function(req, res) {
 
     if (!foundInstructor) return res.send('Instructor not found!')
 
-    // const instructor = {
-    //     ...foundInstructor,
-    //     age: age(foundInstructor.birth),
-    //     services: foundInstructor.services.split(','), //Separação de campos
-    //     created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
-    // }
-
     const instructor = {
         ...foundInstructor,
         birth: date(foundInstructor.birth)
@@ -110,7 +103,9 @@ exports.put = function(req, res) {
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
+
     }
 
     data.instructors[index] = instructor
