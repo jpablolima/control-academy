@@ -181,3 +181,31 @@ a.button {
     margin-top: 8px;
     background-color: brown;
 }
+
+
+/* List Intructors */
+
+.table-container table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.table-container {
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td,
+th {
+    padding: 16px;
+    border-bottom: 1px solid #B0B0B0;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}

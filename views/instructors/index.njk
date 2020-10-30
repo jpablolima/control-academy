@@ -2,24 +2,26 @@
 
 
 {% block content %}
-  <div class="card">
-    <table> 
-        <thead>
-          <tbody>
+<div class="card table-container" >
+  <table> 
+      <thead>
+        <tr>
+          <th>Instrutor</th>
+          <th>Atendimento</th>
+          <th>Ação</th>
+        </tr> 
+      </thead>
+      <tbody>
+            {% for instructor in instructors %}
           <tr>
-            <th>Instrutor</th>
-            <th>Atendimento</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for instructor in instructors %}
-          <tr>
+            
               <td>{{instructor.name}}</td>
               <td>{{instructor.services}}</td>
-          <tr>
-         {% endfor %}
-        </tbody>
-    </table>  
-    
-  <div>
+              <td><a href="/instructors/{{instructor.id}}">Ver</a></td>
+            
+          </tr>
+              {% endfor %}
+      </tbody>
+  </table>  
+<div>
 {% endblock content %}
