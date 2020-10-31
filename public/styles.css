@@ -210,7 +210,7 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
-tbody tr td:first-child td {
+tbody tr td:first-child {
     display: grid;
     grid-template-columns: 64px 1fr;
     align-items: center;
@@ -222,6 +222,6 @@ tbody tr td:first-child span {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    box-shadow: 3px 1px 6px #0E0D15;
+    /* box-shadow: 3px 1px 6px #0E0D15; */
     border: 2px solid #F7FAFF;
 }
