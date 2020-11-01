@@ -127,7 +127,7 @@ header {
 
 .details .item span {
     padding: 8px 16px;
-    background-color: var(--span-color);
+    background-color: #07D98C;
     border-radius: 16px;
     color: #0E0D15;
     margin-right: 4px;
@@ -200,10 +200,16 @@ a.button {
     text-align: left;
 }
 
+th {
+    text-transform: uppercase;
+    color: #545351;
+}
+
 td,
 th {
     padding: 16px;
     border-bottom: 1px solid #B0B0B0;
+    font-size: 14px;
 }
 
 tbody tr:last-child td {
@@ -224,4 +230,19 @@ tbody tr td:first-child span {
     border-radius: 50%;
     /* box-shadow: 3px 1px 6px #0E0D15; */
     border: 2px solid #F7FAFF;
+}
+
+tbody tr td:last-child a {
+    background-color: var(--span-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #F7FAFF;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
 }
