@@ -12,12 +12,23 @@
     </div>
 
 <div class="item">
-    <div>Instrutor</div>
+    <div>Name</div>
     <div>
         <input
             type="text"
             name="name"
-            placeholder="Nome do instrutor"
+            placeholder="Nome do Member"
+            value="{{instructor.name}}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input
+            type="email"
+            name="email"
             value="{{instructor.name}}"
         >
     </div>
@@ -61,17 +72,25 @@
 </div>
 </div>
 
+
 <div class="item">
-<div>Área de atuação</div>
-<div> 
-    <input
-        type="text"  
-        name="services"     
-        placeholder="Separe os serviços prestados por vírgula"
-        value="{{instructor.services}}"    
-    >
+<div>Tipo Sanguíneo</div>
+<div>
+   <select name="blood">
+       <option value="A1">A+</option>
+       <option value="A0">A-</option>
+       <option value="AB1">AB+</option>
+       <option value="AB0">AB-</option>
+       <option value="O1">O+</option>
+       <option value="O0">O-</option>
+    </select>   
+
 </div>
 </div>
+
+
+
+
 
 <button type="submit">Salvar</button>
 
