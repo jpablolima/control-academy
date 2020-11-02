@@ -12,12 +12,11 @@
     </div>
 
 <div class="item">
-    <div>Name</div>
+    <div>Nome</div>
     <div>
         <input
             type="text"
             name="name"
-            placeholder="Nome do Member"
             value="{{instructor.name}}"
         >
     </div>
@@ -74,7 +73,7 @@
 
 
 <div class="item">
-<div>Tipo Sanguíneo</div>
+<div>Tipo sanguíneo</div>
 <div>
    <select name="blood">
        <option value="A1">A+</option>
@@ -84,11 +83,34 @@
        <option value="O1">O+</option>
        <option value="O0">O-</option>
     </select>   
-
 </div>
 </div>
 
+<div>
+    <div class="item">
+        <div>Peso (kg)</div>
+        <div>
+            <input
+                type="number"
+                name="weight"
+                value="{{ instructor.weight }}"
+            >
+        </div>
+    </div>
+</div>
 
+<div>
+    <div class="item">
+        <div>Altura(cm)</div>
+        <div>
+            <input
+                type="number"
+                name="height"
+                value="{{ instructor.height }}"
+            >
+        </div>
+    </div>
+</div>
 
 
 
