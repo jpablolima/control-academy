@@ -1,39 +1,32 @@
 const express = require('express');
 const routes = express.Router(); // responsável pelas rotas
-const instructors = require('./instructors');
+const instructors = require('./controllers/instructors');
+const members = require('./controllers/members');
+
 
 
 routes.get('/', function(req, res) {
     return res.redirect('/instructors')
 })
 
-// route instructors
+// Instrutors
 routes.get('/instructors', instructors.index);
-
-
-
-routes.put('/instructors', instructors.put)
-
-// create
-routes.get('/instructors/create', function(req, res) {
-    return res.render("instructors/create")
-})
-
-// get data
+routes.get('/instructors/create', instructors.create);
 routes.get('/instructors/:id', instructors.show);
-
-//Edit
 routes.get('/instructors/:id/edit', instructors.edit);
-
 routes.post("/instructors", instructors.post);
-
-// Delete
+routes.put('/instructors', instructors.put);
 routes.delete('/instructors', instructors.delete);
 
-// route members
-routes.get('/members', function(req, res) {
-    return res.send("members")
-})
+
+//Members
+routes.get('/members', members.index);
+routes.get('/members/create', members.create);
+routes.get('/members/:id', members.show);
+routes.get('/members/:id/edit', members.edit);
+routes.post("/members", members.post);
+routes.put('/members', members.put)
+routes.delete('/members', members.delete);
 
 
 module.exports = routes;
