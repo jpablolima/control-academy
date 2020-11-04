@@ -23,9 +23,15 @@ module.exports = {
         const year = date.getUTCFullYear()
         const month = `0${date.getUTCMonth() + 1}`
         const day = `0${date.getUTCDate()}`
-
-        return `${year}-${month}-${day}`
             // console.log(`${year} - ${month} - ${day}`);
+
+        return {
+            day,
+            month,
+            year,
+            iso: `${year}-${month}-${day}`,
+            birthDay: `${day}/${month}`
+        }
     }
 
 }
