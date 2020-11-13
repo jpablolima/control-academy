@@ -10,7 +10,9 @@ module.exports = {
         const month = today.getMonth() - birthDate.getMonth();
 
 
-        if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
+        if (month < 0 ||
+            month == 0 &&
+            today.getDate() <= birthDate.getDate()) {
             age = age - 1
         }
 
@@ -21,8 +23,8 @@ module.exports = {
 
         // year-month - day 
         const year = date.getUTCFullYear()
-        const month = `0${date.getUTCMonth() + 1}`
-        const day = `0${date.getUTCDate()}`
+        const month = `0${date.getUTCMonth() + 1}`.slice(-2)
+        const day = `0${date.getUTCDate()}`.slice(-2)
             // console.log(`${year} - ${month} - ${day}`);
 
         return {
